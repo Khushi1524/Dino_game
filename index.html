@@ -31,6 +31,7 @@
 
 
         document.addEventListener("keydown", () => {
+            let jumpaudio = new Audio('./assets/jump.mp3').play();
             let loss = 0;
             error.style.display = "none"
             block.classList.add('animateblock')
@@ -48,6 +49,7 @@
 
                 if (blockleft < 65 && blockleft > 0 && characterTop >= 290) {
                     alert('OOps!! Game Over')
+                    window.location.reload();
                     block.style.display = "none";
                     loss = 1;
                 }
