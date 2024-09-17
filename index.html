@@ -18,7 +18,7 @@
             <div id="block"><img src="./assets/block.png" alt=""></div>
         </div>
         <div class="error">
-            <h2 id="error">Click To Start</h2>
+            <h2 id="error">Press Any Key To Start</h2>
         </div>
     </div>
 
@@ -49,19 +49,19 @@
                 if (blockleft < 65 && blockleft > 0 && characterTop >= 290) {
                     alert('OOps!! Game Over')
                     block.style.display = "none";
-                    loss =1;
+                    loss = 1;
                 }
 
             }, 10)
 
             setInterval(() => {
                 let blockleft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-                if (loss ==0 && blockleft <= 0) {
+                if (loss == 0 && blockleft <= 0) {
                     score++;
                     scoreText.innerHTML = "Score : " + score;
                 }
 
-            }, 2000)
+            }, 190)
         })
 
 
