@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.game .score {
+  display: flex;
+}
+.game #gameboard {
+  width: 900px;
+  height: 500px;
+  border: 2px solid;
+  background-image: url("https://img.freepik.com/free-vector/serene-dessert-landscape-clear-blue-sky_1308-160408.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.game #gameboard .error {
+  position: absolute;
+}
+.game #gameboard .error h2 {
+  font-size: 30px;
+  color: red;
+}
+.game #gameboard #character {
+  height: 120px;
+  width: 80px;
+  position: relative;
+  top: 380px;
+}
+.game #gameboard #character img {
+  height: 120px;
+  width: 80px;
+}
+.game #gameboard .animate {
+  animation: characterjump 700ms linear;
+}
+@keyframes characterjump {
+  0% {
+    top: 380px;
+  }
+  50% {
+    top: 180px;
+  }
+  70% {
+    top: 180px;
+  }
+  100% {
+    top: 380px;
+  }
+}
+.game #gameboard #block {
+  height: 90px;
+  width: 80px;
+  position: relative;
+  top: 290px;
+  left: 820px;
+}
+.game #gameboard #block img {
+  height: 100px;
+  width: 80px;
+}
+.game #gameboard .animateblock {
+  animation: blockanimation 2s infinite linear;
+}
+@keyframes blockanimation {
+  0% {
+    left: 820px;
+  }
+  100% {
+    left: -80px;
+  }
+}/*# sourceMappingURL=style.css.map */
