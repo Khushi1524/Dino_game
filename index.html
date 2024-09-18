@@ -15,7 +15,7 @@
             <h2 id="highscore">HighScore : 0</h2>
         </div>
         <div id="gameboard">
-            <div id="character"><img src="./assets/character.png" alt=""></div>
+            <div id="character"><img id="character-img" src="./assets/charimg.png" alt=""></div>
             <div id="block"><img src="./assets/block.png" alt=""></div>
         </div>
         <div class="error">
@@ -25,17 +25,21 @@
 
     <script>
         let character = document.getElementById('character');
+        let characterImg = document.getElementById('character-img')
         let block = document.getElementById('block');
         let scoreText = document.getElementById('score');
         let highscoreText = document.getElementById('highscore');
         let error = document.getElementById('error');
         let score = 0;
         let isGameOver = false;
-        let blockPassed = false; 
+        let blockPassed = false;
         let highscore = localStorage.getItem('HighScore');
         highscoreText.innerHTML = "HighScore : " + highscore;
 
+
         document.addEventListener("keydown", () => {
+            characterImg.src = './assets/charcater.gif'
+            // let jumpSound = new Audio('./assets/jump.mp3').play();
             if (isGameOver) return;
 
             error.style.display = "none";
@@ -55,27 +59,28 @@
                 if (blockLeft < 65 && blockLeft > 0 && characterTop >= 290) {
                     alert('Oops!! Game Over \n' + 'Your Score is : ' + score);
                     isGameOver = true;
+                    characterImg.src ="./assets/charimg.png";
                     block.classList.remove('animateblock');
                     clearInterval(checkGameStatus);
-                    window.location.reload(); 
+                    window.location.reload();
                 }
 
                 if (blockLeft < 0 && !blockPassed && !isGameOver) {
                     score++;
-                    scoreText.innerHTML = "Score : " + score; 
+                    scoreText.innerHTML = "Score : " + score;
 
                     if (score > highscore) {
                         highscore = score;
                         highscoreText.innerHTML = "HighScore : " + highscore;
                         localStorage.setItem("HighScore", highscore);
                     }
-                    blockPassed = true; 
+                    blockPassed = true;
                 }
 
                 if (blockLeft > 800) {
-                    blockPassed = false; 
+                    blockPassed = false;
                 }
-            }, 10); 
+            }, 10);
         });
 
     </script>

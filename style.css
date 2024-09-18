@@ -21,9 +21,9 @@
   width: 900px;
   height: 500px;
   border: 2px solid;
-  background-image: url("https://img.freepik.com/free-vector/serene-dessert-landscape-clear-blue-sky_1308-160408.jpg");
+  background-image: url("./assets/newbg.gif");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 60vw;
   overflow: hidden;
 }
 .game #gameboard .error {
@@ -42,6 +42,7 @@
 .game #gameboard #character img {
   height: 120px;
   width: 80px;
+  transform: scaleX(-1);
 }
 .game #gameboard .animate {
   animation: characterjump 700ms linear;
