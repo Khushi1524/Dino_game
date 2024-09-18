@@ -6,6 +6,11 @@
   outline: none;
 }
 
+body {
+  background: rgb(244, 217, 135);
+  background: linear-gradient(90deg, rgb(244, 217, 135) 0%, rgb(224, 133, 227) 100%);
+}
+
 .game {
   display: flex;
   flex-direction: column;
@@ -25,6 +30,7 @@
   background-repeat: no-repeat;
   background-size: 900px 500px;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .game #gameboard #character {
   height: 120px;
@@ -82,5 +88,6 @@
 }
 .game .error h2 {
   font-size: 30px;
+  font-weight: bold;
   color: red;
 }/*# sourceMappingURL=style.css.map */

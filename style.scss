@@ -6,6 +6,11 @@
   outline: none;
 }
 
+body{
+  background: rgb(244,217,135);
+background: linear-gradient(90deg, rgba(244,217,135,1) 0%, rgba(224,133,227,1) 100%);
+}
+
 .game {
   display: flex;
   flex-direction: column;
@@ -21,12 +26,13 @@
   #gameboard {
     width: 900px;
     height: 500px;
-    border: 2px solid;
+    border: 2px solid ;
     background-image: url("./assets/image.png");
     // background-image: url("./assets/newbg.gif");
     background-repeat: no-repeat;
     background-size:900px 500px;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     #character {
       height: 120px;
@@ -94,6 +100,7 @@
 
     h2 {
       font-size: 30px;
+      font-weight: bold;
       color: red;
     }
   }
