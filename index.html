@@ -26,6 +26,7 @@
     <script>
         let character = document.getElementById('character');
         let characterImg = document.getElementById('character-img')
+        let gameBoard = document.getElementById('gameboard');
         let block = document.getElementById('block');
         let scoreText = document.getElementById('score');
         let highscoreText = document.getElementById('highscore');
@@ -39,6 +40,7 @@
 
         document.addEventListener("keydown", () => {
             characterImg.src = './assets/charcater.gif'
+            gameBoard.style.backgroundImage = "url('./assets/newbg.gif')";
             // let jumpSound = new Audio('./assets/jump.mp3').play();
             if (isGameOver) return;
 
@@ -57,12 +59,16 @@
                 let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
                 if (blockLeft < 65 && blockLeft > 0 && characterTop >= 290) {
-                    alert('Oops!! Game Over \n' + 'Your Score is : ' + score);
-                    isGameOver = true;
-                    characterImg.src ="./assets/charimg.png";
-                    block.classList.remove('animateblock');
                     clearInterval(checkGameStatus);
+                    isGameOver = true;  
+                    characterImg.src = './assets/charimg.png';
+                     gameBoard.style.backgroundImage = "url('./assets/image.png')"
+                    block.style.animation = "none";  
+                    error.innerHTML = "Game Over! \n"+ "Your Score Is : " + score; 
+                    error.style.display = "block";
+                   setTimeout(()=>{
                     window.location.reload();
+                   },3000)
                 }
 
                 if (blockLeft < 0 && !blockPassed && !isGameOver) {

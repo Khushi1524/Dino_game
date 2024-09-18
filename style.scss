@@ -15,27 +15,18 @@
 
   .score {
     display: flex;
-    gap: 60px;
+    gap: 60px; 
   }
 
   #gameboard {
     width: 900px;
     height: 500px;
     border: 2px solid;
-    // background-image: url("https://img.freepik.com/free-vector/serene-dessert-landscape-clear-blue-sky_1308-160408.jpg");
-    background-image: url("./assets/newbg.gif");
+    background-image: url("./assets/image.png");
+    // background-image: url("./assets/newbg.gif");
     background-repeat: no-repeat;
-    background-size: 60vw;
+    background-size:900px 500px;
     overflow: hidden;
-
-    .error {
-      position: absolute;
-
-      h2 {
-        font-size: 30px;
-        color: red;
-      }
-    }
 
     #character {
       height: 120px;
@@ -94,6 +85,16 @@
       100% {
         left: -80px;
       }
+    }
+  }
+
+  .error {
+    position: absolute;
+    background:black;
+
+    h2 {
+      font-size: 30px;
+      color: red;
     }
   }
 }

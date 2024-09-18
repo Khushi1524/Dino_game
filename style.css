@@ -21,17 +21,10 @@
   width: 900px;
   height: 500px;
   border: 2px solid;
-  background-image: url("./assets/newbg.gif");
+  background-image: url("./assets/image.png");
   background-repeat: no-repeat;
-  background-size: 60vw;
+  background-size: 900px 500px;
   overflow: hidden;
-}
-.game #gameboard .error {
-  position: absolute;
-}
-.game #gameboard .error h2 {
-  font-size: 30px;
-  color: red;
 }
 .game #gameboard #character {
   height: 120px;
@@ -82,4 +75,12 @@
   100% {
     left: -80px;
   }
+}
+.game .error {
+  position: absolute;
+  background: black;
+}
+.game .error h2 {
+  font-size: 30px;
+  color: red;
 }/*# sourceMappingURL=style.css.map */
