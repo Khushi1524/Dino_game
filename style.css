@@ -15,6 +15,7 @@
 }
 .game .score {
   display: flex;
+  gap: 60px;
 }
 .game #gameboard {
   width: 900px;
