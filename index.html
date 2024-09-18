@@ -30,9 +30,10 @@
         let highscoreText = document.getElementById('highscore');
         let error = document.getElementById('error');
         let score = 0;
-        let highscore = 0;
         let isGameOver = false;
         let blockPassed = false; 
+        let highscore = localStorage.getItem('HighScore');
+        highscoreText.innerHTML = "HighScore : " + highscore;
 
         document.addEventListener("keydown", () => {
             if (isGameOver) return;
@@ -67,8 +68,6 @@
                         highscore = score;
                         highscoreText.innerHTML = "HighScore : " + highscore;
                         localStorage.setItem("HighScore", highscore);
-                        highscore.innerHTML = localStorage.getItem("HighScore");
-                        
                     }
                     blockPassed = true; 
                 }
